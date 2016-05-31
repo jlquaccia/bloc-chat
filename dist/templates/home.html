@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<div class="row">
+    <div class="col-md-4 well sidebar">
+        <h1>Bloc Chat</h1>
+        <ul id="rooms">
+            <li ng-repeat="room in allRooms">{{room.$id}}</li>
+        </ul>  
+    </div>
+</div>

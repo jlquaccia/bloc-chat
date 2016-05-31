@@ -3,10 +3,31 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
+    <!--  Normalize  -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--  BlocChat Custom Styles  -->
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 <body>
-    <ui-view></ui-view>
+    <div class="container-fluid">
+        <ui-view></ui-view>
+    </div>
+    
+    <!--  Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAVPxq0NZc7y_6QGxkbC_WogGZm3QUAybw",
+        authDomain: "bloc-chat-d0970.firebaseapp.com",
+        databaseURL: "https://bloc-chat-d0970.firebaseio.com",
+        storageBucket: "bloc-chat-d0970.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
     
     <!--  Firebase v2.3.2  -->
     <script src="/scripts/external/firebase.js"></script>
@@ -19,5 +40,6 @@
     <!--  BlocChat Custom Scripts  -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/services/Room.js"></script>
 </body>
 </html>
