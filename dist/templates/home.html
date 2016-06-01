@@ -4,12 +4,25 @@
         
         <div class="new_room_wrapper">
             <h4 class="rooms_title">ROOMS</h4>
-            <i class="ion-ios-plus-outline plus_outline"></i>
+            <i class="ion-ios-plus-outline plus_outline" ng-click="toggleModal()"></i>
             <div style="clear:both;"></div>
         </div>
         
         <ul id="rooms">
-            <li ng-repeat="room in allRooms">{{room.$id}}</li>
+            <li ng-repeat="room in allRooms">{{room.$value}}</li>
         </ul>  
     </div>
+    
+    <!--  Bootstrap modal to add new room  -->
+    <modal title="Create new room" visible="showModal">
+        <form role="form" ng-submit="addRoom()">
+            <div class="form-group">
+                <label>Enter a room name</label>
+                <input type="text" class="form-control" ng-model="newroom.name">
+            </div>
+            
+            <button type="button" class="btn btn-default" ng-click="toggleModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary" ng-click="toggleModal()">Create room</button>
+        </form>
+    </modal>
 </div>
