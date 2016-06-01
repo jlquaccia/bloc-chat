@@ -11,6 +11,12 @@
     color: #FFF;
 }
 
+.sidebar h1 {
+    font-size: 1.7rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+}
+
 #rooms {
     list-style: none;
     padding: 0;
@@ -18,4 +24,25 @@
 
 #rooms li {
     padding: 0 0 10px 0;
+}
+
+h4.rooms_title {
+    width: 50%;
+    float: left;
+    font-size: 1.3rem;
+}
+
+.plus_outline {
+    position: relative;
+    top: 5px;
+    float: right;
+}
+
+.plus_outline:hover {
+    color: #FFF;
+}
+
+.new_room_wrapper {
+    font-size: 1.8rem;
+    color: #ab9ba9;
 }

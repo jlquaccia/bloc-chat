@@ -1,6 +1,13 @@
 <div class="row">
     <div class="col-md-4 well sidebar">
         <h1>Bloc Chat</h1>
+        
+        <div class="new_room_wrapper">
+            <h4 class="rooms_title">ROOMS</h4>
+            <i class="ion-ios-plus-outline plus_outline"></i>
+            <div style="clear:both;"></div>
+        </div>
+        
         <ul id="rooms">
             <li ng-repeat="room in allRooms">{{room.$id}}</li>
         </ul>  
