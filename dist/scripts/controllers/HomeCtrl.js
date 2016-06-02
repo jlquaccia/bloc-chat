@@ -1,18 +1,17 @@
 (function() {
     function HomeCtrl($scope, Room) {
         $scope.allRooms = Room.all;
-        
-//        $scope.newRoom = {
-//            name: ''
-//        };
 //        
 //        $scope.addRoom = function() {
-//            $scope.allRooms.$add($scope.roomName).then(function(rooms) {
-//                var id = rooms.key();
-//                
-//                console.log("added record with id " + id);
-//                $scope.allRooms.$indexFor(id);
+//            // Creating a unique id
+//            var timestamp = new Date().valueOf();
+//
+//            $scope.allRooms.$add({
+//                id: timestamp,
+//                name: $scope.roomName
 //            });
+//
+//            $scope.roomName = '';
 //        };
         
         // Bootstrap Modal
