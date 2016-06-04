@@ -4,12 +4,12 @@
         
         <div class="new_room_wrapper">
             <h4 class="rooms_title">ROOMS</h4>
-            <i id="trigger-overlay" class="ion-ios-plus-outline plus_outline" ng-click="toggleOverlay()"></i>
+            <i id="trigger-overlay" class="ion-ios-plus-outline plus_outline" ng-click="toggleOverlay(); autoFocus()"></i>
             <div style="clear:both;"></div>
         </div>
         
         <ul id="rooms">
-            <li ng-repeat="room in allRooms">{{room.$value}}</li>
+            <li ng-repeat="room in allRooms">{{room.name}}</li>
         </ul>  
     </div>
     
@@ -18,14 +18,18 @@
         <button type="button" class="overlay-close" ng-click="toggleOverlay()">Close</button>
         <nav>
             <ul>
-                <form role="form" ng-submit="addRoom()">
+                <form role="form">
                     <div class="form-group">
                         <label>Enter a room name</label>
-                        <input type="text" class="form-control" ng-model="roomName">
+                        <input type="text" class="form-control overlay_input" ng-model="roomName">
                     </div>
-
-                    <button type="button" class="btn btn-default" ng-click="toggleOverlay()">Cancel</button>
-                    <button type="submit" class="btn btn-primary" ng-click="toggleOverlay()">Create room</button>
+                    
+                    <section>
+                       <nav class="cl-effect-1">
+                           <a ng-click="toggleOverlay()">Cancel</a>
+                           <a ng-click="toggleOverlay(); addRoom()">Create room</a>
+                       </nav>
+                    </section>
                 </form>
             </ul>
         </nav>

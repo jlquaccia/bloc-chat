@@ -28,7 +28,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #373e18;
+  color: #4D394B;
 }
 
 section button {
@@ -44,7 +44,7 @@ section button {
 }
 
 section {
-  padding: 1em 2em 5em;
+  padding: .5em 2em 5em;
   text-align: center;
   font-size: 1.5em;
 }
@@ -60,6 +60,63 @@ section button {
   padding: 15px 30px;
   outline: none;
   background: #85b91e;
+}
+
+/* Cancel and Create Room Buttons */
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #4D394B;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 0.4em;
+}
+
+nav a:hover, nav a:focus {
+  outline: none;
+}
+
+/* Brackets Hover Effect (for cancel/create room buttons) */
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -webkit-transform 0.3s, opacity 0.2s;
+  transition: -webkit-transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* Overlay style */
@@ -170,6 +227,16 @@ section button {
 .overlay-hugeinc.close nav ul {
   -webkit-transform: translateY(25%) rotateX(-35deg);
   transform: translateY(25%) rotateX(-35deg);
+}
+
+.overlay_input {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.overlay_input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 @media screen and (max-height: 30.5em) {
