@@ -4,7 +4,7 @@
         
         <div class="new_room_wrapper">
             <h4 class="rooms_title">ROOMS</h4>
-            <i class="ion-ios-plus-outline plus_outline" ng-click="toggleModal()"></i>
+            <i id="trigger-overlay" class="ion-ios-plus-outline plus_outline" ng-click="toggleOverlay()"></i>
             <div style="clear:both;"></div>
         </div>
         
@@ -13,16 +13,21 @@
         </ul>  
     </div>
     
-    <!--  Bootstrap modal to add new room  -->
-    <modal title="Create new room" visible="showModal">
-        <form role="form" ng-submit="addRoom()">
-            <div class="form-group">
-                <label>Enter a room name</label>
-                <input type="text" class="form-control" ng-model="roomName">
-            </div>
-            
-            <button type="button" class="btn btn-default" ng-click="toggleModal()">Cancel</button>
-            <button type="submit" class="btn btn-primary" ng-click="toggleModal()">Create room</button>
-        </form>
-    </modal>
+    <!--  Overlay  -->
+    <div class="overlay overlay-hugeinc">
+        <button type="button" class="overlay-close" ng-click="toggleOverlay()">Close</button>
+        <nav>
+            <ul>
+                <form role="form" ng-submit="addRoom()">
+                    <div class="form-group">
+                        <label>Enter a room name</label>
+                        <input type="text" class="form-control" ng-model="roomName">
+                    </div>
+
+                    <button type="button" class="btn btn-default" ng-click="toggleOverlay()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" ng-click="toggleOverlay()">Create room</button>
+                </form>
+            </ul>
+        </nav>
+    </div>
 </div>

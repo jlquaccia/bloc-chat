@@ -14,11 +14,15 @@
 //            $scope.roomName = '';
 //        };
         
-        // Bootstrap Modal
-        $scope.showModal = false;
-        $scope.toggleModal = function() {
-            $scope.showModal = !$scope.showModal;
-        };
+        // Overlay
+        
+        $scope.toggleOverlay = function() {
+            if (!$('.overlay-hugeinc').hasClass('open')) {
+                $('.overlay-hugeinc').addClass('open');
+            } else {
+                $('.overlay-hugeinc').removeClass('open');
+            }
+        }
     }
     
     angular
