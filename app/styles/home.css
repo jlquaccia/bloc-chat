@@ -9,6 +9,7 @@
     background-color: #4D394B;
     border: none;
     color: #FFF;
+    z-index: 10;
 }
 
 .sidebar h1 {
@@ -45,4 +46,22 @@ h4.rooms_title {
 .new_room_wrapper {
     font-size: 1.8rem;
     color: #ab9ba9;
+}
+
+.messages_container {
+    margin-left: 15.5%;
+    width: 1220px;
+    padding-right: 25px;
+}
+
+.row_wrapper {
+    overflow: hidden;
+}
+
+.message_header_wrapper {
+    padding-left: 105px;
+}
+
+.message_navbar {
+    z-index: 0;
 }

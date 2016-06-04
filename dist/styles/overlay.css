@@ -203,6 +203,7 @@ nav a:hover, nav a:focus {
   visibility: visible;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+  z-index: 99;
 }
 
 .overlay-hugeinc nav {
