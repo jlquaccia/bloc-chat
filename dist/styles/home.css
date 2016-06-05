@@ -25,6 +25,7 @@
 
 #rooms li {
     padding: 0 0 10px 0;
+    font-size: 1.3rem;
 }
 
 h4.rooms_title {
@@ -63,7 +64,7 @@ h4.rooms_title {
 }
 
 .message_navbar {
-    z-index: 0;
+    z-index: 1;
 }
 
 .current_room_name {
@@ -99,6 +100,10 @@ div#chat_container {
     margin-bottom: 10px;
 }
 
+.message_wrapper:last-of-type {
+    margin-bottom: 64px;
+}
+
 .user_image_wrapper {
     padding-right: 0;
     width: 4.333333%;
@@ -106,4 +111,32 @@ div#chat_container {
 
 .name_time_and_message_wrapper {
     width: 95.666667%;
+}
+
+.bottom_nav_wrapper {
+    z-index: 0;
+}
+
+.message_input_wrapper {
+    padding-left: 105px;
+}
+
+.message_input, .message_submit {
+    margin: 10px 0;
+}
+
+.message_input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.message_submit {
+    background-color: #4D394B;
+    border-color: transparent;
+}
+
+.message_submit:hover, .message_submit:focus, .message_submit:active {
+    background-color: #4D394B !important;
+    border-color: transparent;
+    outline: none !important;
 }
