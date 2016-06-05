@@ -29,6 +29,13 @@
                 $('input.overlay_input').focus();
             }
         };
+        
+        // Set current room name to header
+        $scope.currentTitle = function(room) {
+            var roomText = room.name;
+            
+            $('.current_room_name').text(roomText);
+        };
     }
     
     angular

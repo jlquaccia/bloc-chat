@@ -65,3 +65,45 @@ h4.rooms_title {
 .message_navbar {
     z-index: 0;
 }
+
+.current_room_name {
+    margin: 10px 0;
+}
+
+div#chat_container {
+    margin-top: 69px;
+}
+
+.user_image {
+    border-radius: .2rem;
+    width: 36px;
+    height: 36px;
+}
+
+.name_and_time_wrapper {
+    display: flex;
+    font-size: 1.4rem;
+}
+
+.user_name {
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.message_content {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.message_wrapper {
+    margin-bottom: 10px;
+}
+
+.user_image_wrapper {
+    padding-right: 0;
+    width: 4.333333%;
+}
+
+.name_time_and_message_wrapper {
+    width: 95.666667%;
+}
