@@ -5,7 +5,6 @@
             restrict: 'E',
             transclude: true,
             replace: true,
-            scope: true,
             link: function postLink(scope, element, attrs) {
                 scope.title = attrs.title;
                 
@@ -28,21 +27,6 @@
                         scope.$parent[attrs.visible] = false;
                     });
                 });
-            },
-            controller: function($scope, Room) {
-                $scope.allRooms = Room.all;
-
-                $scope.addRoom = function() {
-                    // Creating a unique id
-                    var timestamp = new Date().valueOf();
-
-                    $scope.allRooms.$add({
-                        id: timestamp,
-                        name: $scope.roomName
-                    });
-
-                    $scope.roomName = '';
-                };
             }
         };
     }

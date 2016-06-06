@@ -7,7 +7,17 @@
                 <h4 class="modal-title">{{title}}</h4>
             </div>
             
-            <div class="modal-body" ng-transclude></div>
+            <div class="modal-body">
+                <form role="form" ng-submit="addRoom()">
+                    <div class="form-group">
+                        <label>Enter a room name</label>
+                        <input type="text" class="form-control" ng-model="roomName">
+                    </div>
+
+                    <button type="button" class="btn btn-default" ng-click="toggleModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" ng-click="toggleModal();">Create room</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
