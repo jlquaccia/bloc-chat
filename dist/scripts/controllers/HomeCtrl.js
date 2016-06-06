@@ -1,7 +1,8 @@
 (function() {
-    function HomeCtrl($scope, Room) {
+    function HomeCtrl($scope, Room, Message) {
         $scope.allRooms = Room.all;
         
+        // Add a new room
         $scope.addRoom = function() {
             // Creating a unique id
             var timestamp = new Date().valueOf();
@@ -12,6 +13,11 @@
             });
 
             $scope.roomName = '';
+        };
+        
+        // Current active room
+        $scope.activeRoom = function() {
+            
         };
         
         // Overlay
@@ -40,5 +46,5 @@
     
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['$scope', 'Room', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', 'Room', 'Message', HomeCtrl]);
 })();
