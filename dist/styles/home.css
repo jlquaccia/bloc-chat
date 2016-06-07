@@ -71,7 +71,7 @@ h4.rooms_title {
     margin: 10px 0;
 }
 
-div#chat_container {
+div#chat_container:first-of-type {
     margin-top: 69px;
 }
 
@@ -98,10 +98,6 @@ div#chat_container {
 
 .message_wrapper {
     margin-bottom: 10px;
-}
-
-.message_wrapper:last-of-type {
-    margin-bottom: 64px;
 }
 
 .user_image_wrapper {
@@ -139,4 +135,8 @@ div#chat_container {
     background-color: #4D394B !important;
     border-color: transparent;
     outline: none !important;
+}
+
+.last_message_wrapper {
+    margin-bottom: 64px;
 }

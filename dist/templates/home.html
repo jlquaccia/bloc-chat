@@ -9,7 +9,7 @@
         </div>
         
         <ul id="rooms">
-            <li ng-repeat="room in allRooms" ng-click="currentTitle(room)">{{room.name}}</li>
+            <li ng-repeat="room in allRooms" ng-click="setCurrentRoom(room)">{{room.name}}</li>
         </ul>  
     </div>
     
@@ -21,7 +21,7 @@
           </div>
         </nav>
         
-        <div id="chat_container">
+        <div id="chat_container" ng-repeat="message in currentMessages" ng-class="{'last_message_wrapper':$last}">
             <div class="row message_wrapper">
                 <div class="col-md-1 user_image_wrapper">
                     <img src="/assets/images/black_and_white_me.jpg" alt="Jason Quaccia" class="img-responsive user_image">
@@ -29,16 +29,17 @@
                 
                 <div class="col-md-11 name_time_and_message_wrapper">
                     <div class="name_and_time_wrapper">
-                        <div class="user_name">Jason</div>
-                        <div class="timestamp text-muted">1:46 PM</div>
+                        <div class="user_name">{{message.username}}</div>
+                        <div class="timestamp text-muted">{{message.sentAt}}</div>
                     </div>
                     
                     <div class="message_content">
-                        Welcome to Bloc Chat!
+                        {{message.content}}
                     </div>
                 </div>
             </div>
             
+<!--
             <div class="row message_wrapper">
                 <div class="col-md-1 user_image_wrapper">
                     <img src="/assets/images/black_and_white_me.jpg" alt="Jason Quaccia" class="img-responsive user_image">
@@ -76,6 +77,7 @@
                     </div>
                 </div>
             </div>
+-->
         </div>
         
         <!--   Bottom Nav    -->
