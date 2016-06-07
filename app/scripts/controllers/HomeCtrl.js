@@ -48,6 +48,12 @@
             
             $scope.currentMessages = Room.getMessages($scope.currentRoomId);
         };
+        
+        $scope.addNewMessage = function(){
+//            window.foo = $scope.currentMessages;
+            $scope.currentMessages.$add({content: $scope.newMessage, roomId: $scope.currentRoomId, sentAt: Date.now(), username: 'jlquaccia' });
+            $scope.newMessage = '';
+        }
     }
     
     angular
