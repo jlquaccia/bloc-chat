@@ -3,8 +3,12 @@
         var currentUser = $cookies.get('blocChatCurrentUser');
         
         if (!currentUser || currentUser === '') {
-            // Do something to allow users to set their username
-            console.log('There is no current user');
+            // Modal test
+            $('#modal-1').addClass('md-show');
+
+            $('.md-close').click(function() {
+              $('#modal-1').removeClass('md-show');
+            });
         }
     }
     
