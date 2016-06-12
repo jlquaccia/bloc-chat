@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl($scope, Room) {
+    function HomeCtrl($scope, $rootScope, $cookies, Room) {
         $scope.allRooms = Room.all;
         $scope.currentRoomId = '';
         $scope.currentMessages = [
@@ -29,12 +29,19 @@
             }
         }
         
-        // Autofocus for new room form
+        // Autofocus for input to create and set a new room name
         $scope.autoFocus = function() {
             if ($('.overlay').hasClass('open')) {
                 $('input.overlay_input').focus();
             }
         };
+        
+        // Autofocus to set username
+        setTimeout(function() {
+            if ($('#modal-1').hasClass('md-show')) {
+                $('input.setUsernameInput').focus();
+            }
+        }, 500);
         
         // Set current room to chat in
         $scope.setCurrentRoom = function(room) {
@@ -50,12 +57,24 @@
         };
         
         $scope.addNewMessage = function(){
-            $scope.currentMessages.$add({content: $scope.newMessage, roomId: $scope.currentRoomId, sentAt: Date.now(), username: 'jlquaccia' });
+            $scope.currentMessages.$add({content: $scope.newMessage, roomId: $scope.currentRoomId, sentAt: Date.now(), username: $scope.currentUsername || $rootScope.currentUser });
             $scope.newMessage = '';
         };
+        
+        $scope.closeModal = function() {
+            $('#modal-1').removeClass('md-show');
+        };
+        
+        $scope.setUserName = function() {
+            $cookies.put('blocChatCurrentUser', $scope.currentUsername);
+            $('.current_room_name').text('Welcome ' + $scope.currentUsername + '!');
+        };
+        
+        console.log($cookies.get('blocChatCurrentUser'));
+        
     }
     
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['$scope', 'Room', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', '$rootScope', '$cookies', 'Room', HomeCtrl]);
 })();

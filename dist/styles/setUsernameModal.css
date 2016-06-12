@@ -91,7 +91,7 @@ button:hover {
 	left: 0;
 	z-index: 1000;
 	opacity: 0;
-	background: rgba(143,27,15,0.8);
+	background: rgba(77,57,75,0.8);
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -105,7 +105,7 @@ button:hover {
 /* Content styles */
 .md-content {
 	color: #fff;
-	background: #e74c3c;
+	background: #4D394B;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
@@ -169,4 +169,23 @@ button:hover {
 	-ms-transform: scale(1);
 	transform: scale(1);
 	opacity: 1;
+}
+
+/* Set username submit button */
+
+.setUsernameBtn {
+    padding: .5em 2em 0;
+}
+
+.setUsernameBtn nav a {
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 100;
+    text-shadow: none;
+}
+
+/* Set username input */
+#modal-1 .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }

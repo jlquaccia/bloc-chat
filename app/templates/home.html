@@ -17,7 +17,7 @@
         <!--   Top Nav    -->
         <nav class="navbar navbar-default navbar-fixed-top message_navbar">
           <div class="container message_header_wrapper">
-            <h1 class="current_room_name">Welcome!</h1>
+            <h1 class="current_room_name">Welcome {{currentUser}}!</h1>
           </div>
         </nav>
         
@@ -78,15 +78,21 @@
     <!--  Set Username Modal  -->
     <div class="md-modal md-effect-1" id="modal-1">
         <div class="md-content">
-            <h3>Modal Dialog</h3>
+            <h3>Welcome to Bloc Chat!</h3>
             <div>
-                <p>This is a modal window. You can do the following things with it:</p>
-                <ul>
-                    <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                    <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                    <li><strong>Close:</strong> click on the button below to close the modal.</li>
-                </ul>
-                <button class="md-close">Close me!</button>
+                <form>
+                    <div class="form-group">
+                        <label>Please choose a username:</label>
+                        <input type="text" class="form-control setUsernameInput" ng-model="currentUsername">
+                    </div>
+                    
+<!--                    <button class="md-close">Close me!</button>-->
+                    <section class="setUsernameBtn">
+                       <nav class="cl-effect-1">
+                           <a class="md-close" ng-click="closeModal(); setUserName()">Set Username</a>
+                       </nav>
+                    </section>
+                </form>
             </div>
         </div>
     </div>
