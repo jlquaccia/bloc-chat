@@ -80,16 +80,16 @@
         <div class="md-content">
             <h3>Welcome to Bloc Chat!</h3>
             <div>
-                <form>
+                <form ng-submit="closeModal(); setUserName()">
                     <div class="form-group">
                         <label>Please choose a username:</label>
-                        <input type="text" class="form-control setUsernameInput" ng-model="currentUsername">
+                        <input type="text" class="form-control setUsernameInput" ng-model="currentUsername" required>
                     </div>
                     
 <!--                    <button class="md-close">Close me!</button>-->
                     <section class="setUsernameBtn">
                        <nav class="cl-effect-1">
-                           <a class="md-close" ng-click="closeModal(); setUserName()">Set Username</a>
+                           <button type="submit" class="md-close">Set Username</button>
                        </nav>
                     </section>
                 </form>

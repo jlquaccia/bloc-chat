@@ -2,6 +2,7 @@
     function Cookies($cookies, $rootScope) {
         $rootScope.currentUser = $cookies.get('blocChatCurrentUser');
         
+        // Remove blocChatCurrentUser cookie if needed
 //        $cookies.remove('blocChatCurrentUser');
         
         // Will prompt a user on app load to set a username if they have not already

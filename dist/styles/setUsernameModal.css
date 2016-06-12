@@ -177,11 +177,47 @@ button:hover {
     padding: .5em 2em 0;
 }
 
-.setUsernameBtn nav a {
+.setUsernameBtn nav button {
     color: #fff;
     font-size: 0.8em;
     font-weight: 100;
     text-shadow: none;
+    background-color: transparent;
+}
+
+.setUsernameBtn nav button::before,
+.setUsernameBtn nav button::after {
+    display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -webkit-transform 0.3s, opacity 0.2s;
+  transition: -webkit-transform 0.3s, opacity 0.2s;
+}
+
+.setUsernameBtn nav button::before {
+    margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.setUsernameBtn nav button::after {
+    margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.setUsernameBtn nav button:hover::before,
+.setUsernameBtn nav button:hover::after,
+.setUsernameBtn nav button:focus::before,
+.setUsernameBtn nav button:hover::after {
+    opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* Set username input */

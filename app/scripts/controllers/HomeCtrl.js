@@ -56,15 +56,18 @@
             $scope.currentMessages = Room.getMessages($scope.currentRoomId);
         };
         
+        // Submit a new chat message
         $scope.addNewMessage = function(){
             $scope.currentMessages.$add({content: $scope.newMessage, roomId: $scope.currentRoomId, sentAt: Date.now(), username: $scope.currentUsername || $rootScope.currentUser });
             $scope.newMessage = '';
         };
         
+        // Close setUsername modal
         $scope.closeModal = function() {
             $('#modal-1').removeClass('md-show');
         };
         
+        // Set current username to a cookie
         $scope.setUserName = function() {
             $cookies.put('blocChatCurrentUser', $scope.currentUsername);
             $('.current_room_name').text('Welcome ' + $scope.currentUsername + '!');
