@@ -80,13 +80,14 @@
         <div class="md-content">
             <h3>Welcome to Bloc Chat!</h3>
             <div>
-                <form ng-submit="closeModal(); setUserName()">
-                    <div class="form-group">
+                <form name="userForm" ng-submit="validSubmit()" novalidate>
+                    <div class="form-group" ng-class="{'has-error': userForm.username.$invalid && userForm.username.$touched}">
                         <label>Please choose a username:</label>
-                        <input type="text" class="form-control setUsernameInput" ng-model="currentUsername" required>
+                        <input type="text" name="username" class="form-control setUsernameInput" ng-model="currentUsername" required ng-minlength="4">
+                        <p ng-show="userForm.username.$error.required && userForm.username.$touched" class="help-block">A username is required.</p>
+                        <p ng-show="userForm.username.$error.minlength && userForm.username.$touched" class="help-block">Username must be at least 4 characters long.</p>
                     </div>
                     
-<!--                    <button class="md-close">Close me!</button>-->
                     <section class="setUsernameBtn">
                        <nav class="cl-effect-1">
                            <button type="submit" class="md-close">Set Username</button>

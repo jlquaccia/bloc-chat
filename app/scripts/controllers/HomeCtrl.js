@@ -73,6 +73,14 @@
             $('.current_room_name').text('Welcome ' + $scope.currentUsername + '!');
         };
         
+        // Allow user to set a username if form is valid
+        $scope.validSubmit = function() {
+            if ($scope.userForm.$valid) {
+                $scope.setUserName();
+                $scope.closeModal();
+            }
+        };
+        
         console.log($cookies.get('blocChatCurrentUser'));
         
     }

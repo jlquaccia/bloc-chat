@@ -111,15 +111,19 @@ button:hover {
 	margin: 0 auto;
 }
 
+.md-content label {
+    color: rgba(77,57,75,1);
+}
+
 .md-content h3 {
 	margin: 0;
 	padding: 0.4em;
 	text-align: center;
 	font-size: 2.4em;
 	font-weight: 300;
-	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;
+    background-color: rgba(76,150,137,1);
 }
 
 .md-content > div {
@@ -127,6 +131,7 @@ button:hover {
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
+    background-color: #fff;
 }
 
 .md-content > div p {
@@ -178,11 +183,12 @@ button:hover {
 }
 
 .setUsernameBtn nav button {
-    color: #fff;
+    color: rgba(77,57,75,1);
     font-size: 0.8em;
-    font-weight: 100;
+    font-weight: 300;
     text-shadow: none;
     background-color: transparent;
+    border: 1px solid rgba(77,57,75,0.5);
 }
 
 .setUsernameBtn nav button::before,
@@ -224,4 +230,14 @@ button:hover {
 #modal-1 .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+/* Styles for form errors */
+.has-error .form-control,
+.has-error .form-control:focus {
+    border-color: rgba(255,169,64,1);
+}
+
+.has-error .help-block {
+    color: rgba(255,169,64,1);
 }
