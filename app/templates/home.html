@@ -82,7 +82,7 @@
         <nav class="navbar navbar-default navbar-fixed-bottom bottom_nav_wrapper">
           <div class="container message_input_wrapper">
             <div class="col-md-10">
-                <input type="text" ng-model="newMessage" class="form-control message_input">
+                <input type="text" ng-model="newMessage" class="form-control message_input" on-enter="addNewMessage()">
             </div>
             <div class="col-md2">
                 <button type="button" ng-click="addNewMessage()" class="btn btn-primary message_submit" ng-disabled="currentRoomId === ''">Submit</button>

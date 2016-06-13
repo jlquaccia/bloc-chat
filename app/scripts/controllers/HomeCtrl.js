@@ -84,6 +84,7 @@
             }
         };
         
+        // Display carousel on welcome state
         $('#carouselHacked').carousel();
         
         console.log($cookies.get('blocChatCurrentUser'));
