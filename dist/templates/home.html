@@ -47,7 +47,7 @@
                 <input type="text" ng-model="newMessage" class="form-control message_input">
             </div>
             <div class="col-md2">
-                <button type="button" ng-click="addNewMessage()" class="btn btn-primary message_submit">Submit</button>
+                <button type="button" ng-click="addNewMessage()" class="btn btn-primary message_submit" ng-disabled="currentRoomId === ''">Submit</button>
             </div>
           </div>
         </nav>
