@@ -53,7 +53,10 @@
             // Set current room name to header
             $('.current_room_name').text(roomText);
             
+            // Get messages relevant to what chat room was entered
             $scope.currentMessages = Room.getMessages($scope.currentRoomId);
+            
+            $('#welcome_slider_container').css('display', 'none');
         };
         
         // Submit a new chat message
@@ -80,6 +83,8 @@
                 $scope.closeModal();
             }
         };
+        
+        $('#carouselHacked').carousel();
         
         console.log($cookies.get('blocChatCurrentUser'));
         
