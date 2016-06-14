@@ -126,9 +126,10 @@
                 <form name="userForm" ng-submit="validSubmit()" novalidate>
                     <div class="form-group" ng-class="{'has-error': userForm.username.$invalid && userForm.username.$touched}">
                         <label>Please choose a username:</label>
-                        <input type="text" name="username" class="form-control setUsernameInput" ng-model="currentUsername" required ng-minlength="4">
+                        <input type="text" name="username" class="form-control setUsernameInput" ng-model="currentUsername" required ng-minlength="3" ng-maxlength="15">
                         <p ng-show="userForm.username.$error.required && userForm.username.$touched" class="help-block">A username is required.</p>
-                        <p ng-show="userForm.username.$error.minlength && userForm.username.$touched" class="help-block">Username must be at least 4 characters long.</p>
+                        <p ng-show="userForm.username.$error.minlength && userForm.username.$touched" class="help-block">Username must be at least 3 characters long.</p>
+                        <p ng-show="userForm.username.$error.maxlength && userForm.username.$touched" class="help-block">Username can't be more than 15 characters long.</p>
                     </div>
                     
                     <section class="setUsernameBtn">
