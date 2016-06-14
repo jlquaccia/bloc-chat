@@ -74,6 +74,7 @@
         $scope.setUserName = function() {
             $cookies.put('blocChatCurrentUser', $scope.currentUsername);
             $('.current_room_name').text('Welcome ' + $scope.currentUsername + '!');
+            $('.hidden_instructions').fadeIn();
         };
         
         // Allow user to set a username if form is valid

@@ -141,6 +141,34 @@ div#chat_container:first-of-type {
     margin-bottom: 64px;
 }
 
+.instructions {
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 4px;
+    left: 330px;
+}
+
+.instructions span {
+    color: rgba(76,150,137,1);
+}
+
+.hidden_instructions {
+    display: none;
+    top: 13px;
+    left: 580px;
+}
+
+.delay {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.short_delay {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
 /* Welcome div */
 #welcome_slider_container {
     height: 610px;

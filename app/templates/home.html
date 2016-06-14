@@ -17,7 +17,12 @@
         <!--   Top Nav    -->
         <nav class="navbar navbar-default navbar-fixed-top message_navbar">
           <div class="container message_header_wrapper">
-            <h1 class="current_room_name">Welcome {{currentUser}}!</h1>
+            <h1 ng-show="!currentUser" class="current_room_name animated fadeInLeft">Welcome!</h1>
+            <div class="instructions hidden_instructions animated fadeInRight short_delay"><span><em>Join</em></span> or <span><em>create</em></span> a new chat room on the left.</div>
+           
+            <h1 ng-show="currentUser" class="current_room_name animated fadeInLeft">Welcome {{currentUser}}!
+                <div class="instructions animated flash delay"><span><em>Join</em></span> or <span><em>create</em></span> a new chat room on the left.</div>
+            </h1>
           </div>
         </nav>
         
