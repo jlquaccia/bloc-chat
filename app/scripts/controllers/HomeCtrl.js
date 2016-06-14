@@ -70,6 +70,10 @@
         $scope.addNewMessage = function(){
             $scope.currentMessages.$add({content: $scope.newMessage, roomId: $scope.currentRoomId, sentAt: Date.now(), username: $scope.currentUsername || $rootScope.currentUser });
             $scope.newMessage = '';
+            
+            // Enables autoscroll down to make sure the last message sent is always visible
+            var $elem = $('.messages_container');
+            $('html, body').animate({scrollTop: $elem.height()}, 800);
         };
         
         // Close setUsername modal

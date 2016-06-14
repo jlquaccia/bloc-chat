@@ -156,8 +156,8 @@ div#chat_container:first-of-type {
 
 .hidden_instructions {
     display: none;
-    top: 13px;
-    left: 580px;
+    top: 15px;
+    right: 40px;
 }
 
 .delay {
