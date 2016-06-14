@@ -115,6 +115,7 @@ div#chat_container:first-of-type {
 
 .message_input_wrapper {
     padding-left: 105px;
+    display: none;
 }
 
 .message_input, .message_submit {
@@ -145,8 +146,8 @@ div#chat_container:first-of-type {
     font-weight: 300;
     font-size: 30px;
     position: absolute;
-    top: 4px;
-    left: 330px;
+    top: 15px;
+    right: 40px;
 }
 
 .instructions span {
@@ -160,8 +161,8 @@ div#chat_container:first-of-type {
 }
 
 .delay {
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 .short_delay {

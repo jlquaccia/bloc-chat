@@ -56,7 +56,14 @@
             // Get messages relevant to what chat room was entered
             $scope.currentMessages = Room.getMessages($scope.currentRoomId);
             
+            // Hide welcome carousel
             $('#welcome_slider_container').css('display', 'none');
+            
+            // Display input field to chat
+            $('.message_input_wrapper').fadeIn();
+            
+            // Autofocus input field so it is ready for a user to chat
+            $('.message_input_wrapper .message_input').focus();
         };
         
         // Submit a new chat message

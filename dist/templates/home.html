@@ -20,8 +20,8 @@
             <h1 ng-show="!currentUser" class="current_room_name animated fadeInLeft">Welcome!</h1>
             <div class="instructions hidden_instructions animated fadeInRight short_delay"><span><em>Join</em></span> or <span><em>create</em></span> a new chat room on the left.</div>
            
-            <h1 ng-show="currentUser" class="current_room_name animated fadeInLeft">Welcome {{currentUser}}!
-                <div class="instructions animated flash delay"><span><em>Join</em></span> or <span><em>create</em></span> a new chat room on the left.</div>
+            <h1 ng-show="currentUser" class="current_room_name animated fadeIn">Welcome {{currentUser}}!
+                <div class="instructions animated fadeInRight delay"><span><em>Join</em></span> or <span><em>create</em></span> a new chat room on the left.</div>
             </h1>
           </div>
         </nav>
@@ -87,7 +87,7 @@
         <nav class="navbar navbar-default navbar-fixed-bottom bottom_nav_wrapper">
           <div class="container message_input_wrapper">
             <div class="col-md-10">
-                <input type="text" ng-model="newMessage" class="form-control message_input" on-enter="addNewMessage()">
+                <input type="text" ng-model="newMessage" class="form-control message_input" on-enter="addNewMessage()" placeholder="Write your message here...">
             </div>
             <div class="col-md2">
                 <button type="button" ng-click="addNewMessage()" class="btn btn-primary message_submit" ng-disabled="currentRoomId === ''">Submit</button>
