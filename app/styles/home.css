@@ -382,9 +382,10 @@ nav ul li a:hover {
   -webkit-transition-property: all .2s linear 0s;
   -o-transition-property: all .2s linear 0s;
   position: absolute;
-  top: 2px;
+  top: 9px;
   right: 2px;
   margin: 15px 25px;
+  font-size: 15px;
 }
 
 .hamburger_btn_close:hover:after {
@@ -396,7 +397,7 @@ nav ul li a:hover {
   display: none;
   position: fixed;
   top: 0;
-/*  height: 100%;*/
+  height: 100%;
   width: 100%;
   background: #333;
   overflow: auto;
@@ -405,13 +406,17 @@ nav ul li a:hover {
 
 .wrap {
   color: #e9e9e9;
-  text-align: center;
+/*  text-align: center;*/
   max-width: 90%;
   margin: 0 auto;
 }
 
+.mobile_nav_logo {
+    font-weight: 300;
+}
+
 .wrap ul.wrap-nav {
-  border-bottom: 1px solid #575757;
+/*  border-bottom: 1px solid #575757;*/
   text-transform: capitalize;
   padding: 150px 0 100px;
 }
@@ -507,7 +512,7 @@ nav ul li a:hover {
   }
   
   .wrap ul.wrap-nav {
-    padding: 30px 0 0;
+    padding: 0;
   }
   
   nav ul {

@@ -160,4 +160,10 @@
     .hamburger_btn {
         display: block;
     }
+    
+    .plus_outline {
+        float: none;
+        top: 2px;
+        left: 2px;
+    }
 }
