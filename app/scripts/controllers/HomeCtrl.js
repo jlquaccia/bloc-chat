@@ -101,6 +101,20 @@
             pause: 'false'
         });
         
+        // Mobile Hamburger Menu
+        $(document).ready(function() {
+          $('.hamburger_btn a').click(function() {
+            $('.mobile_overlay').fadeToggle(200);
+//            $(this).toggleClass('hamburger_btn_open').toggleClass('hamburger_btn_close');
+          });
+        });
+
+        $('.hamburger_btn_close').on('click', function() {
+          $('.mobile_overlay').fadeToggle(200);
+//          $('.hamburger_btn a').toggleClass('hamburger_btn_open').toggleClass('hamburger_btn_close');
+//          open = false;
+        });
+        
         console.log($cookies.get('blocChatCurrentUser'));
         
     }
