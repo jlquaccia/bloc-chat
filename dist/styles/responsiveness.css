@@ -99,7 +99,7 @@
     }
     
     span.thin {
-        font-weight: 100;
+        font-weight: 300;
     }
     
     span.fat {
@@ -119,7 +119,7 @@
         color: #fff;
         text-align: center;
         margin: 0;
-        font-weight: 100;
+        font-weight: 300;
     }
     
     .green {
@@ -134,7 +134,7 @@
         color: #fff;
         text-align: center;
         margin: 0;
-        font-weight: 100;
+        font-weight: 300;
     }
     
     .purple {
@@ -149,11 +149,11 @@
         color: #fff;
         text-align: center;
         margin: 0;
-        font-weight: 100;
+        font-weight: 300;
     }
     
     .current_room_name {
         font-size: 20px;
-        font-weight: 100;
+        font-weight: 300;
     }
 }
