@@ -1,4 +1,13 @@
 /*==========================*/
+/* 1400px */
+/*==========================*/
+@media (max-width: 1400px) {
+    .message_input, .message_submit {
+        margin: 10px 20px;
+    }
+}
+
+/*==========================*/
 /* 1350px */
 /*==========================*/
 @media (max-width: 1350px) {
@@ -41,6 +50,10 @@
         font-size: 20px;
         top: 20px;
     }
+    
+    .name_time_and_message_wrapper {
+        padding-left: 25px;
+    }
 }
 
 /*==========================*/
@@ -77,6 +90,34 @@
     .overlay nav ul {
         visibility: visible;
     }
+    
+    .user_image_wrapper {
+        float: left;
+    }
+    
+    .name_time_and_message_wrapper {
+        position: relative;
+        left: 3%;
+    }
+    
+    .message_input_wrapper {
+        padding-left: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .message_submit {
+        display: none;
+    }
+    
+    .message_input {
+        margin: 10px 0;
+    }
+    
+    .inner_message_input_wrapper {
+        width: 100%;
+        padding-right: 0;
+    }
 }
 
 /*==========================*/
@@ -112,6 +153,10 @@
     .overlay_input {
         max-width: 70%;
     }
+    
+    .name_time_and_message_wrapper {
+        left: 4%;
+    }
 }
 
 /*==========================*/
@@ -120,6 +165,14 @@
 @media (max-width: 750px) {
     .carousel_caption_override {
         padding: 100px 50px;
+    }
+    
+    .name_time_and_message_wrapper {
+        left: 6%;
+    }
+    
+    .message_content {
+        padding-right: 12%;
     }
 }
 
@@ -138,6 +191,10 @@
     .setUsernameBtn {
         padding: .5em 0 0;
     }
+    
+    .user_image_wrapper {
+        margin-left: 15px; 
+    }
 }
 
 /*==========================*/
@@ -148,6 +205,10 @@
         border: none;
         padding: 0;
         top: 30%;
+    }
+    
+    .name_time_and_message_wrapper {
+        left: 8%;
     }
 }
 
@@ -270,5 +331,9 @@
     
     .hamburger_btn_open:after {
         top: -2px;
+    }
+    
+    .name_time_and_message_wrapper {
+        left: 10%;
     }
 }

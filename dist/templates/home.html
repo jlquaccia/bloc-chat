@@ -36,7 +36,7 @@
         <div id="chat_container" ng-repeat="message in currentMessages" ng-class="{'last_message_wrapper':$last}" ng-hide="currentRoomId === ''">
             <div class="row message_wrapper">
                 <div class="col-md-1 user_image_wrapper">
-                    <img src="/assets/images/black_and_white_me.jpg" alt="Jason Quaccia" class="img-responsive user_image">
+                    <img src="/assets/images/black_and_white_me.jpg" alt="Jason Quaccia" class="user_image">
                 </div>
                 
                 <div class="col-md-11 name_time_and_message_wrapper">
@@ -124,7 +124,7 @@
         <!--   Bottom Nav    -->
         <nav class="navbar navbar-default navbar-fixed-bottom bottom_nav_wrapper">
           <div class="container message_input_wrapper">
-            <div class="col-md-10">
+            <div class="col-md-10 inner_message_input_wrapper">
                 <input type="text" ng-model="newMessage" class="form-control message_input" on-enter="addNewMessage()" placeholder="Write your message here...">
             </div>
             <div class="col-md2">
