@@ -136,7 +136,12 @@
     
     <!--  New Room Overlay  -->
     <div class="overlay overlay-hugeinc">
+        <!--  Close Button for Larger Devices  -->
         <button type="button" class="overlay-close" ng-click="toggleOverlay()">Close</button>
+        
+        <!--  Close Button for Smaller Devices  -->
+        <button type="button" class="ion-ios-close-outline mobile_new_room_close_btn" ng-click="toggleOverlay()"></button>
+        
         <nav>
             <ul>
                 <form role="form">

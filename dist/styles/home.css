@@ -392,6 +392,10 @@ nav ul li a:hover {
   color: #34B484;
 }
 
+.mobile_new_room_close_btn {
+    display: none;
+}
+
 /*overlay*/
 .mobile_overlay {
   display: none;

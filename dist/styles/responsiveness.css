@@ -1,3 +1,6 @@
+/*==========================*/
+/* 1350px */
+/*==========================*/
 @media (max-width: 1350px) {
     .sidebar {
         display: none;
@@ -12,8 +15,27 @@
     .message_header_wrapper {
         padding: 0;
     }
+    
+    .hamburger_btn {
+        display: block;
+    }
+    
+    .instructions {
+        display: none;
+    }
+    
+    .hamburger_btn a {
+        font-size: 0.7em;
+    }
+    
+    .hamburger_btn_open:after {
+        top: 4px;
+    }
 }
 
+/*==========================*/
+/* 1200px */
+/*==========================*/
 @media (max-width: 1200px) {
     .instructions {
         font-size: 20px;
@@ -21,12 +43,45 @@
     }
 }
 
+/*==========================*/
+/* 1000px */
+/*==========================*/
 @media (max-width: 1000px) {
     .messages_container {
         width: 100%;
     }
+    
+    .overlay-close {
+        display: none;
+    }
+    
+    .mobile_new_room_close_btn {
+        display: block;
+        background: none;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 5em;
+        color: rgba(77,57,75,1);
+    }
+    
+    .mobile_new_room_close_btn:hover {
+        background: none;
+    }
+    
+    .overlay .cl-effect-1 a {
+        font-size: 0.4em;
+    }
+    
+    .overlay nav ul {
+        visibility: visible;
+    }
 }
 
+/*==========================*/
+/* 900px */
+/*==========================*/
 @media (max-width: 900px) {
     .instructions {
         display: none;
@@ -46,12 +101,31 @@
     }
 }
 
+/*==========================*/
+/* 800px */
+/*==========================*/
+@media (max-width: 800px) {
+    .overlay section {
+        padding: .5em 0 0;
+    }
+    
+    .overlay_input {
+        max-width: 70%;
+    }
+}
+
+/*==========================*/
+/* 750px */
+/*==========================*/
 @media (max-width: 750px) {
     .carousel_caption_override {
         padding: 100px 50px;
     }
 }
 
+/*==========================*/
+/* 700px */
+/*==========================*/
 @media (max-width: 700px) {
     .messages_container {
         padding: 0;
@@ -66,6 +140,9 @@
     }
 }
 
+/*==========================*/
+/* 550px */
+/*==========================*/
 @media (max-width: 550px) {
     .carousel_caption_override {
         border: none;
@@ -74,6 +151,30 @@
     }
 }
 
+/*==========================*/
+/* 500px */
+/*==========================*/
+@media (max-width: 500px) {
+    .overlay label {
+        font-size: .5em;
+    }
+    
+    .overlay .cl-effect-1 a {
+        font-size: 0.2em;
+    }
+    
+    .overlay_input {
+        max-width: 80%;
+    }
+    
+    .overlay section {
+        padding: 0;
+    }
+}
+
+/*==========================*/
+/* 450px */
+/*==========================*/
 @media (max-width: 450px) {
     #welcome_slider_container {
         display: none;
@@ -157,13 +258,17 @@
         font-weight: 300;
     }
     
-    .hamburger_btn {
-        display: block;
-    }
-    
     .plus_outline {
         float: none;
         top: 2px;
         left: 2px;
+    }
+    
+    nav a {
+        font-size: 0.4em;
+    }
+    
+    .hamburger_btn_open:after {
+        top: -2px;
     }
 }
