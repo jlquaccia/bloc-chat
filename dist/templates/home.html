@@ -101,26 +101,6 @@
             </div>
         </div>
         
-        <!--    Mobile Nav Menu    -->
-        <div class="mobile_overlay">
-          <a href="#" class="hamburger_btn_close"></a>
-          
-          <div class="wrap">
-            <h1 class="mobile_nav_logo">Bloc Chat</h1>
-            
-            <ul class="wrap-nav">
-              <li><a href="#">Existing Rooms</a>
-                <ul id="rooms">
-                  <li ng-repeat="room in allRooms" ng-click="setCurrentRoom(room)">{{room.name}}</li>
-                </ul>
-              </li>
-              
-              <li><a href="#">New Room <i id="trigger-overlay" class="ion-ios-plus-outline plus_outline" ng-click="toggleOverlay(); autoFocus()"></i></a></li>
-<!--              <div style="clear:both;"></div>-->
-            </ul>
-          </div>
-        </div>
-        
         <!--   Bottom Nav    -->
         <nav class="navbar navbar-default navbar-fixed-bottom bottom_nav_wrapper">
           <div class="container message_input_wrapper">
@@ -132,6 +112,27 @@
             </div>
           </div>
         </nav>
+    </div>
+    
+    <!--    Mobile Nav Menu    -->
+    <div class="mobile_overlay">
+      <a href="#" class="hamburger_btn_close"></a>
+
+      <div class="wrap">
+        <h1 class="mobile_nav_logo">Bloc Chat</h1>
+
+        <ul class="wrap-nav">
+          <li><a href="#">Existing Rooms</a>
+            <ul id="rooms">
+              <li ng-repeat="room in allRooms" ng-click="setCurrentRoom(room)">{{room.name}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="stubbon_anchor_wrapper">
+          <a href="#" ng-click="toggleOverlay(); autoFocus()" class="stubbon_anchor">New Room <i id="trigger-overlay" class="ion-ios-plus-outline plus_outline"></i></a>
+      </div>
     </div>
     
     <!--  New Room Overlay  -->

@@ -18,14 +18,19 @@
         // Add a new room
         $scope.addRoom = function() {
             Room.newRoom($scope.roomName);
+            $scope.roomName = '';
         };
         
         // Overlay
         $scope.toggleOverlay = function() {
             if (!$('.overlay-hugeinc').hasClass('open')) {
                 $('.overlay-hugeinc').addClass('open');
+                $('.overlay').css('z-index', '99');
             } else {
                 $('.overlay-hugeinc').removeClass('open');
+                
+                // Close mobile modal
+                $('.mobile_overlay').hide();
             }
         }
         
@@ -64,6 +69,12 @@
             
             // Autofocus input field so it is ready for a user to chat
             $('.message_input_wrapper .message_input').focus();
+            
+            // Close mobile modal
+            $('.mobile_overlay').fadeOut(200);
+            
+            // Hide mobile welcome container
+            $('#welcome_mobile_container').hide();
         };
         
         // Submit a new chat message
@@ -105,6 +116,7 @@
         $(document).ready(function() {
           $('.hamburger_btn a').click(function() {
             $('.mobile_overlay').fadeToggle(200);
+            $('.overlay').css('z-index', '5');
 //            $(this).toggleClass('hamburger_btn_open').toggleClass('hamburger_btn_close');
           });
         });
