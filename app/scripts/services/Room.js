@@ -9,12 +9,14 @@
                 // Creating a unique id
                 var timestamp = new Date().valueOf();
                 
-                this.all.$add({
+                var room = this.all.$add({
                    id: timestamp,
                    name: roomName
                 });
                 
                 roomName = '';
+
+                return room;
             },
             getMessages: function(currentRoomId) {
                 var messages = $firebaseArray(firebaseRef.child('messages').orderByChild('roomId').equalTo(currentRoomId));

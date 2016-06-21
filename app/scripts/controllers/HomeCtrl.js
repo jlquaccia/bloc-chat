@@ -17,8 +17,35 @@
         
         // Add a new room
         $scope.addRoom = function() {
-            Room.newRoom($scope.roomName);
-            $scope.roomName = '';
+            Room.newRoom($scope.roomName).then(function(ref){
+                // Firebase Stuff
+
+                // Grab the key of the new room just created
+                $scope.currentRoomId = ref.key();
+                // Set current room name to header
+                $('.current_room_name').text($scope.roomName);
+                // Reset roomName to nothing so that the next time a room is created the input will be blank
+                $scope.roomName = '';
+                // Get messages relevant to what chat room was entered
+                $scope.currentMessages = Room.getMessages($scope.currentRoomId);
+
+                // jQuery Stuff
+
+                // Hide welcome carousel
+                $('#welcome_slider_container').css('display', 'none');
+                // Display input field to chat
+                $('.message_input_wrapper').fadeIn();
+                // Autofocus input field so it is ready for a user to chat
+                $('.message_input_wrapper .message_input').focus();
+                // Close mobile modal
+                $('.mobile_overlay').fadeOut(200);
+                // Hide mobile welcome container
+                $('#welcome_mobile_container').hide();
+                return ref.key();
+            });
+
+
+      
         };
         
         // Overlay
@@ -32,7 +59,7 @@
                 // Close mobile modal
                 $('.mobile_overlay').hide();
             }
-        }
+        };
         
         // Autofocus for input to create and set a new room name
         $scope.autoFocus = function() {
@@ -50,29 +77,26 @@
         
         // Set current room to chat in
         $scope.setCurrentRoom = function(room) {
+            // Firebase Stuff
+
             var roomText = room.name;
-            
             // Find the id of the current room
             $scope.currentRoomId = room.$id;
-            
             // Set current room name to header
             $('.current_room_name').text(roomText);
-            
             // Get messages relevant to what chat room was entered
             $scope.currentMessages = Room.getMessages($scope.currentRoomId);
             
+            // jQuery Stuff
+
             // Hide welcome carousel
             $('#welcome_slider_container').css('display', 'none');
-            
             // Display input field to chat
             $('.message_input_wrapper').fadeIn();
-            
             // Autofocus input field so it is ready for a user to chat
             $('.message_input_wrapper .message_input').focus();
-            
             // Close mobile modal
             $('.mobile_overlay').fadeOut(200);
-            
             // Hide mobile welcome container
             $('#welcome_mobile_container').hide();
         };
